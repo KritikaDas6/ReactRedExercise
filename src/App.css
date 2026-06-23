@@ -1,0 +1,11 @@
+html body {
+  display: block;
+  place-items: normal;
+}
+
+.characterButton {
+  /* Why doesn't this work? (See line #39 in App.js for where this class is applied) */
+  /* color: red; */
+  background-color: red;
+
+}
