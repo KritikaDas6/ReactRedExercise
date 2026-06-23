@@ -30,33 +30,13 @@ function App() {
 
       <Container maxWidth="lg"> 
         <Button variant="contained" color="error" className="characterButton">
-         
-            Add item
+
             Red Button?
   
         </Button>
 
 
-          {/* <button className="characterButton" variant="contained">
-
-
-            {/* variant="contained" */}
-            {/* // I'm trying to use custom CSS defined in the file App.css,
-            // but it isn't working. Why, and how can I fix it? */}
-
-    
-            {/* <className = "characterButton"/> */}
       
-
-        \
-            
-            
-
-          {/* </button> */}
-{/* 
-          <Button variant="contained" color="red">
-                Red Button?
-          </Button> */}
 
       </Container>
     </>
