@@ -8,6 +8,7 @@ import dogs from "./dogs.json";
 
 
 
+
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -19,10 +20,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 
-import motleyImage from './assets/motley.png';
-import NilaImage from './assets/Nila.png';
-import harrisImage from './assets/harris.png';
-import gilbertImage from './assets/gilbert.png';
+import { useState } from 'react';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -36,10 +34,16 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-// import characters from './protagonists.json'
+
+
+
 
 function App() {
+
+  const [counter, setCounter] = useState(0);
   return (
+  
+
     <>
 
     {/* //header */}
@@ -58,105 +62,51 @@ function App() {
           color="text.secondary"
           sx={{ mx: 10 }}
         >
-
         </Typography>
+        
       </Container>
-{/* 
-      <Container maxWidth="lg"> 
-        <Button variant="contained" color="error" className="characterButton">
-
-            Red Button?
-  
-        </Button>
-      </Container> */}
-
-
-     {/* //cards */}
-     <Box sx={{ width: '100%' }}>
-     <Grid container rowSpacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-         <Grid size={4}>
-          <DataCard 
-                imageURL="/src/assets/Nila.png"
-                name="Nila"
-                age={2}
-                size="large"
-                gender="male"
-              />
-        </Grid>
-      
-
-         <Grid size={4}>
-               
-              <DataCard 
-                imageURL={"/src/assets/harris.png"}
-                name="Harris"
-                age={2}
-                size="large"
-                gender="male"
-              />
-        </Grid>
-
-         {/* <Grid size={4}> */}
-          {/* {/* <Item>
-            {/* <Card sx={{ maxWidth: 345 }}> */}
-              {/* <CardMedia
-                sx={{ height: 400 }}
-                image={gilbertImage}
-                title="blue iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Gilbert
-                </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-              </CardActions> */}
-            {/* </Card> */}
-
-          {/* </Item>  */}
-
-          <Grid size={4}>
-          <DataCard
-            imageURL={motleyImage}
-            name = {"Motley"}
-            age = {5}
-            size = {"small"}
-            gender = {"male"}
-          />
-        </Grid> 
-     
-
-        <Grid size={4}>
-          <DataCard
-            imageURL={gilbertImage}
-            name = {"Gilbert"}
-            age = {5}
-            size = {"small"}
-            gender = {"male"}
-          />
-        </Grid> 
 
 
 
+
+
+      <Button
+          variant="contained"
+          sx={{ px: 6, mx: "auto" }}
+          onClick={() => {
+            setCounter(counter + 1);
+            console.log("You clicked me!", {counter});
+          }}
+        > Click Me
+      </Button>
+
+      {/* <Typography variant="h5">
+        Clicks so far: {counter}
+      </Typography> */}
+
+   
+      <Grid spacing={4} container>
+
+        {dogs.map((dog) => (
+          <Grid>
+            <DataCard
+              name={dog.name}
+              imageURL={dog.imageURL}
+              age= {dog.age}
+              size= {dog.size}
+              gender= {dog.gender}
+            />
+          </Grid>
+        ))}
       </Grid>
-    </Box>
 
 
-
-
-
-      
-    
     </>
 
     
   )
+
 }
 
 export default App
+
