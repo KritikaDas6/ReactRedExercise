@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Nila",
+    "imageURL": "/src/assets/Nila.png",
+    "age": 2,
+    "size": "large",
+    "gender": "male"
+  },
+  {
+    "id": 2,
+    "name": "Harris",
+    "imageURL": "/src/assets/harris.png",
+    "age": 2,
+    "size": "large",
+    "gender": "male"
+  },
+  {
+    "id": 3,
+    "name": "Motley",
+    "imageURL": "/src/assets/motley.png",
+    "age": 5,
+    "size": "small",
+    "gender": "male"
+  },
+  {
+    "id": 4,
+    "name": "Gilbert",
+    "imageURL": "/src/assets/gilbert.png",
+    "age": 5,
+    "size": "small",
+    "gender": "male"
+  }
+]
