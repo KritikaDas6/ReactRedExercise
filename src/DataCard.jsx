@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
 
-export default function DataCard({ imageURL, name, age, size, gender}) {
+export default function DataCard({ imageURL, name, age, size, gender, onCardClick}) {
   return (
-    <Card sx={{ maxWidth: 445 }}> 
+    <Card sx={{ maxWidth: 445, cursor: 'pointer' }} onClick={onCardClick}> 
       
       <CardMedia component="img" height="400px" image={imageURL} title = {name} />
       <CardContent sx={{ pt: 3 }}>
