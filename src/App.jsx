@@ -23,6 +23,8 @@ import Box from '@mui/material/Box';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 
+
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
   ...theme.typography.body2,
@@ -47,6 +49,7 @@ const style = {
 };
 
 
+import Forms from './Forms';
 
 function App() {
   //States
@@ -86,6 +89,7 @@ function App() {
         </Typography>
         
       </Container>
+      <Forms />
 
       <Box
         component="form"
@@ -99,7 +103,7 @@ function App() {
           variant="outlined" 
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)} 
-          fullWidth
+          fullWidth //this make it full width 
         />
       </Box>
 
@@ -161,6 +165,7 @@ function App() {
           ))}
         </Grid>
       </Box>
+
     </>
   );
 }
